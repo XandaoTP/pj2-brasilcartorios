@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.home-grid {
+    display: flex ;
+    flex-direction: column;
+    padding: 20px 0px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;    
+}
+.carrousel {
+    padding-bottom: 15px;
+  
+} 
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#root > main {
+    flex: 1;
+}
+html, body, #root {
+  height: 100%;
+}
+body {
+    background-color: rgb(207, 207, 207);
+}
