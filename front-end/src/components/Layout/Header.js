@@ -19,8 +19,8 @@ export function Header() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link as={Link} to="#action1">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/documentos">Link</Nav.Link>
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/servicosnotariais">Serviços</Nav.Link>
                     <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>

@@ -1,19 +1,21 @@
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Cards() {
     return (
-        <Card style={{ width: '18rem' }} className='ml mr mt-2' >
-        <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
+    <Container>    
+        <Card style={{ width: '18rem' }} className='mt-2 cardservices' >
+            <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of
+                the card's content.
+                </Card.Text>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
         </Card>
+    </Container>    
     )
 }
