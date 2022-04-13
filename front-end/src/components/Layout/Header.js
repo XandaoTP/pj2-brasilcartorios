@@ -7,7 +7,7 @@ export function Header() {
     return ( 
        <Navbar className="bg-dark bg-gradient" expand={false}>
             <Container pr-2 pl-2>
-            <Navbar.Brand className="text-white" href="#"><img src={Logo}></img>Brasil Cartórios</Navbar.Brand>
+            <Navbar.Brand className="text-white" href="#"><img src={Logo} alt='Brasil cartorios'></img>Brasil Cartórios</Navbar.Brand>
             <Navbar.Toggle className="bg-light" aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas 
                 id="offcanvasNavbar"
