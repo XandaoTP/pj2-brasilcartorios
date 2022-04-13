@@ -4,6 +4,7 @@ import imgcar from '../../assets/img/documentos1.png'
 import firsts from '../../assets/img/banner-certidao.jpg'
 import secondimg from '../../assets/img/documentos-autenticar.jpg'
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export function Webview() {
@@ -29,7 +30,7 @@ export function Webview() {
       <Container>
         <div className="home-grid">
           <div>
-            <p>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado<span ><Nav as={Link} to="/servicosnotariais">clicando aqui</Nav> </span></p>
+            <p className='font-weight-bold'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado<span ><Nav as={Link} to="/servicosnotariais">clicando aqui</Nav> </span></p>
           </div>         
           <div>        
             <img src={imgcar} width='100%' alt="documento"></img>
