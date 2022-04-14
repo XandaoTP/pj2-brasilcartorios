@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 .home-grid {
     display: grid ;
     grid-template-columns: 1fr 1fr;
@@ -9,15 +10,12 @@
     gap: 2px;
 }
 .carrousel {
-    padding-bottom: 15px;
-  
+    padding-bottom: 15px; 
 } 
-
 #root {
     display: flex;
     flex-direction: column;
 }
-
 #root > main {
     flex: 1;
 }

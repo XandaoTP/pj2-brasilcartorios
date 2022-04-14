@@ -1,21 +1,21 @@
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
 
-export function Cards() {
-    return (
-    <Container>    
-        <Card style={{ width: '18rem' }} className='mt-2 cardservices' >
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+export function Cards( { serv } ) {
+    return (  
+        <Card style={{ width: '18rem' }} className='mt-3 cardservices h-100' >
+            <Card.Body className='d-flex flex-column'>
+                <Card.Title>{serv.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
                 <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                {serv.description}
                 </Card.Text>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
+                <div className="d-flex mt-auto">
+                    <Card.Link as={Link} to={`/servicosnotarias/${serv.id}`}>Card Link</Card.Link>
+                    <Card.Link href="#">Another Link</Card.Link>
+                </div>
             </Card.Body>
         </Card>
-    </Container>    
     )
 }

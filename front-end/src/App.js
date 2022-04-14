@@ -10,7 +10,7 @@ function App() {
   return (
     <Routes>
     <Route path="/" element={<Webview />} />
-    <Route path="*" element={<NotFoundView />} />
+    <Route path="/*" element={<NotFoundView />} />
     <Route path="/servicosnotariais" element={<Services  />} />
   </Routes>
   );
