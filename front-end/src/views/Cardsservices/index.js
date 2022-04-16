@@ -1,12 +1,37 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import { Cards } from "../../components/Cards";
 import { Layout } from "../../components/Layout";
+import { Load } from "../../components/Load";
+
 
 export function Services () {
+    const [services, setServices] = useState([])
+    const [load, setLoad] = useState(true)
+    const [loadError, setLoaderror] = useState()
+    useEffect(() => {
+      fetch('http://localhost:3001/services')
+        .then((response) => response.json())
+        .then((result) => {
+            setServices(result)
+        })
+        .catch(() => {
+            setLoaderror('Tivemos um problema. Tente novamente.')
+        })
+        .finally (() =>{
+            setLoad(false)
+        })      
+    }, [])
     return(
         <Layout>
             <Container>
                 <h1 className="text-center mt-3 mb-3">SERVIÇOS</h1>
+                {load && (
+                    <Load />
+                )}
+                {loadError && (
+                    <Alert variant="danger" className="text-center my-5">{loadError}</Alert>
+                )}
                 <Row> 
                     {services.map((serv) =>{
                         return (
