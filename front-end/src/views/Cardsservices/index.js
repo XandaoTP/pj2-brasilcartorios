@@ -10,7 +10,7 @@ export function Services () {
     const [load, setLoad] = useState(true)
     const [loadError, setLoaderror] = useState()
     useEffect(() => {
-      fetch('http://localhost:3001/services')
+      fetch(`${process.env.REACT_APP_API_URL}/services`)
         .then((response) => response.json())
         .then((result) => {
             setServices(result)
