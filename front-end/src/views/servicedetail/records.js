@@ -1,4 +1,4 @@
-import { Alert, Container, Table } from "react-bootstrap";
+import { Alert, Table } from "react-bootstrap";
 
 export function Records ({records}) {
     return (
