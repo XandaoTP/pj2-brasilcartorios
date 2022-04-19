@@ -12,7 +12,7 @@ export function Cards( { serv } ) {
                     {serv.description}
                 </Card.Text>
                 <div className="d-flex mt-auto justify-content-center">
-                    <Card.Link as={Link} to={`/servicosnotarias/${serv.id}`}>Conheça</Card.Link>
+                    <Card.Link as={Link} to={`/servicosnotariais/${serv.id}`}>Conheça</Card.Link>
                     <Card.Link href="#">Cadastre-se</Card.Link>
                 </div>
             </Card.Body>

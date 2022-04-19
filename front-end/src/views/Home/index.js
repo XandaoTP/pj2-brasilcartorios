@@ -36,6 +36,20 @@ export function Webview() {
             <img src={imgcar} width='100%' alt="documento"></img>
           </div>  
         </div>
+        <div className="notes">
+          <div className="note">
+            <p>dfgssssssssssssssssssssssssaa</p>
+          </div>
+          <div className="note">
+            <p>asd</p>
+          </div>
+          <div className="note">
+            <p>asdasd</p>
+          </div>
+          <div className="note">
+            <p>asdasd</p>
+          </div>
+        </div>
       </Container>  
       </Layout>
     )
