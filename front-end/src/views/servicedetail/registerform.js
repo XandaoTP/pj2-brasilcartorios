@@ -91,10 +91,3 @@ export function Registerform ({ serviceId, onRegister }) {
      </>
     )
 }
-
-{/* <h2>Realize seu Cadastros</h2>
-<input
-placeholder="Digite seu nome"
-value={registerName}
-onChange={(event) => setRegisterName(event.target.value)}
-/> */}
