@@ -26,11 +26,10 @@ export function ServiceInfoView () {
                     setError(message)
                     setLoad(false)
                }
-            }, [id] )
-         
+            },[id])        
         useEffect(() => {     
         fetchServices()
-        }, [id])
+        }, [fetchServices])
         if(load) {
             return (
                 <Load />
