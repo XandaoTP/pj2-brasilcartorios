@@ -10,7 +10,8 @@ export function Records ({records}) {
                     <tr>
                         <th>Protocolo</th>
                         <th>Nome</th>
-                        <th>Cidade</th>
+                        <th>local de pesquisa</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +20,7 @@ export function Records ({records}) {
                         <td>{record.id}</td>
                         <td>{record.name}</td>
                         <td>{record.city}</td>
+                        <td>{record.email}</td>
                     </tr>
                     ))}                
                 </tbody>

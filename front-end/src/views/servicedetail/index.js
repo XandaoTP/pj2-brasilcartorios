@@ -5,6 +5,7 @@ import { Layout } from "../../components/Layout";
 import { Load } from "../../components/Load";
 import { NotFoundView } from "../Notfound";
 import { Records } from "./records";
+import { Registerform } from "./registerform";
 
 export function ServiceInfoView () {
         const { id } = useParams()
@@ -47,7 +48,8 @@ export function ServiceInfoView () {
                 <p><strong>{service.description}</strong></p> 
                 <Records records={service.records} />
                 </>
-            )} 
+                )} 
+                <Registerform serviceId={id} />
             </Container>   
         </Layout>
     )
