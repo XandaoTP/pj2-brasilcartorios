@@ -2,7 +2,6 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import { Layout } from "../../components/Layout";
 import firsts from '../../assets/img/banner-certidao.jpg'
 import secondimg from '../../assets/img/documentos-autenticar.jpg'
-import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cartserv from '../../assets/img/cartorio-e-servico.png'
 
