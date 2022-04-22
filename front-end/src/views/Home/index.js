@@ -15,15 +15,13 @@ export function Webview() {
         <div className="home">         
             <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
         </div >
-        
         <Carousel className='carrousel'>
-        <Carousel.Item>
+        <Carousel.Item data-interval="5">
           <img
             className="d-block w-100"
             src={firsts} height="250px"
             alt="First slide"
-          />
-          
+          />  
         </Carousel.Item>
         <Carousel.Item>
           <img
