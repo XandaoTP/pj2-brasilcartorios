@@ -1,15 +1,15 @@
 import { useState } from "react"
 import { Alert, Button, Form } from "react-bootstrap"
-
-export function Registerform ({ serviceId }) {
+ 
+export function Registerform ({ serviceId, onRegister }) {
    const [registerSuccess, setRegisterSuccess] = useState(false)
    const [error, setError] = useState()
    const [noRepeatSub, setNoRepeatSub] = useState(false)
     const [data, setDate] = useState({
-       user: '',
-       city: '',
-       email: ''
-      })
+      user: '',
+      city: '',
+      email: ''
+     })
     const SelectForm = (event) => {
        setDate({
           ...data,
@@ -34,6 +34,12 @@ export function Registerform ({ serviceId }) {
             }
          })
          setRegisterSuccess(true)
+         setDate({
+            user: '',
+            city: '',
+            email: ''
+           })
+           onRegister()
       } catch (err) {
          console.error(err)
          setError('Ocorreu um erro. Tente novamente.')
@@ -64,7 +70,7 @@ export function Registerform ({ serviceId }) {
             <Form.Label className="m-0">Local de pesquisa</Form.Label>
             <Form.Control
             placeholder="Insira o local de pesquisa"
-            value={data.city}
+            value={data.city} 
             onChange={SelectForm}
             name='city'
             required

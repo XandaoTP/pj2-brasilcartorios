@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Alert, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
@@ -12,22 +12,23 @@ export function ServiceInfoView () {
         const [service, setService] = useState()
         const [load, setLoad] = useState(true)
         const [error, setError] = useState()
-        useEffect(() => {
-            const fetchServices = async () => {
-            try {
-                const detailService = await fetch(`${process.env.REACT_APP_API_URL}/services/${id}?_embed=records`)
-                if(!detailService.ok) {
-                    throw new Error('Detailservice is not responding.')
-                }
-            const info = await detailService.json()
-            setService(info)
-            setLoad(false)
-            } catch (err) {
-                const message = err.message === 'Detailservice is not responding.' ? '404' : 'Tivemos um problema. Tente recarregar a pagina.'
-                setError(message)
+        const fetchServices = useCallback(async () => {
+                try {
+                    const detailService = await fetch(`${process.env.REACT_APP_API_URL}/services/${id}?_embed=records`)
+                    if(!detailService.ok) {
+                        throw new Error('Detailservice is not responding.')
+                    }
+                const info = await detailService.json()
+                setService(info)
                 setLoad(false)
-           }
-        }
+                } catch (err) {
+                    const message = err.message === 'Detailservice is not responding.' ? '404' : 'Tivemos um problema. Tente recarregar a pagina.'
+                    setError(message)
+                    setLoad(false)
+               }
+            }, [id] )
+         
+        useEffect(() => {     
         fetchServices()
         }, [id])
         if(load) {
@@ -49,7 +50,7 @@ export function ServiceInfoView () {
                 <Records records={service.records} />
                 </>
                 )} 
-                <Registerform serviceId={id} />
+                <Registerform serviceId={id} onRegister={fetchServices} />
             </Container>   
         </Layout>
     )
