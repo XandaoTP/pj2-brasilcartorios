@@ -9,6 +9,13 @@ import cartserv from '../../assets/img/cartorio-e-servico.png'
 export function Webview() {
     return (
       <Layout>
+        <Container>
+        <h1 className="text-center mt-3 mb-3 text-success"> CARTÓRIO É SERVIÇO</h1>
+        <img src={cartserv}  alt='Cartório' width ='100%' className="mt-0"/> 
+        <div className="home">         
+            <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
+        </div >
+        
         <Carousel className='carrousel'>
         <Carousel.Item>
           <img
@@ -25,13 +32,7 @@ export function Webview() {
             alt="Second slide"
           />
         </Carousel.Item>
-      </Carousel>
-      <Container>
-        <h1 className="text-center mb-3"> CARTÓRIO É SERVIÇO</h1>
-        <div className="home">         
-            <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
-        </div >  
-        <img src={cartserv}  alt='Cartório' width ='100%' className="mt-0"/> 
+      </Carousel> 
         <div>
           <Row>
           <Col xs={6} md={6} lg={6} className='mb-3 text-center'>  
@@ -39,7 +40,7 @@ export function Webview() {
             <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center">Corregedoria Nacional</a>
           </Col>
           <Col xs={6} md={6} lg={6} className='mb-3'>  
-            <h3 className="text-center">Links uteis</h3>
+            <h3 className="text-center">Noticias</h3>
           </Col>
           </Row>
         </div>

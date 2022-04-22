@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
 .home {
     padding: 20px 0px;
     font-family: 'Oswald', sans-serif;
-    font-size: 18px;   
+    font-size: 1.5rem;   
 }
 .carrousel {
     padding-bottom: 15px; 
@@ -19,7 +24,7 @@ html, body, #root {
   height: 100%;
 }
 body {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(255, 255, 255);
 }
 .carrousel-img1 {
     object-fit: fill;
