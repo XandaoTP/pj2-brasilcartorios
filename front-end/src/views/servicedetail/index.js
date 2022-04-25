@@ -45,7 +45,7 @@ export function ServiceInfoView () {
                 ) : (
                 <>
                 <h1 className="text-center mt-5">{service.name}</h1>
-                <p className="text-center"><strong>{service.description}</strong></p> 
+                <p className="text-center text-info">{service.description}</p> 
                 <Records records={service.records} />
                 </>
                 )} 
