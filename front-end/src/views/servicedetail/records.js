@@ -26,7 +26,7 @@ export function Records ({records}) {
                 </tbody>
             </Table>
             ): (
-                <Alert>asdasdasd</Alert>
+                <Alert>Não existem cadastros para este serviço.</Alert>
             )}
         </>
     )

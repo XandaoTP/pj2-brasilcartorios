@@ -40,12 +40,12 @@ export function ServiceInfoView () {
         }
         return (
         <Layout>
-            <Container id='oi'>
+            <Container>
                 {error ? ( <Alert variant="danger" className="text-center">{error}</Alert>
                 ) : (
                 <>
                 <h1 className="text-center mt-5">{service.name}</h1>
-                <p><strong>{service.description}</strong></p> 
+                <p className="text-center"><strong>{service.description}</strong></p> 
                 <Records records={service.records} />
                 </>
                 )} 
