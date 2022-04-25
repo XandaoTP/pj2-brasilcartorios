@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Cards( { serv } ) {
     return (  
-        <Card style={{ width: '18rem' }} className='mt-3 cardservices h-100' >
+        <Card style={{ width: '18rem' }} className='mt-3 mb-5 cardservices h-100' >
             <Card.Body className='d-flex flex-column'>
                 <Card.Title className="text-center text-success">{serv.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted text-center">{serv.subTitle}</Card.Subtitle>

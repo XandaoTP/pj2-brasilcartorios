@@ -86,7 +86,7 @@ export function Registerform ({ serviceId, onRegister }) {
             type='email'
             />
          </Form.Group>
-         <Button type='submit' variant="success"  disabled={noRepeatSub} className='mb-3'>Registrar</Button>
+         <Button type='submit' variant="success"  disabled={noRepeatSub} className='mb-5'>Registrar</Button>
      </Form>
      </>
     )
