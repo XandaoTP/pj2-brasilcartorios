@@ -13,7 +13,7 @@ export function Webview() {
         <h1 className="text-center mt-3 mb-3 text-success"> CARTÓRIO É SERVIÇO</h1>
         <img src={cartserv}  alt='Cartório' width ='100%' className="mt-0"/> 
         <div className="home">         
-            <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
+            <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer cartório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
         </div >
           <img
             className="d-block w-100"
