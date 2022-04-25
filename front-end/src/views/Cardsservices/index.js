@@ -33,7 +33,7 @@ export function Services () {
                 {loadError && (
                     <Alert variant="danger" className="text-center my-5">{loadError}</Alert>
                 )}
-                <Row> 
+                <Row className='mb-3'> 
                     {services.map((serv) =>{
                         return (
                     <Col xs={12} md={6} lg={4} className='mb-3'>             
