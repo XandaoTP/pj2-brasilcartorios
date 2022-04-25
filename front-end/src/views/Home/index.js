@@ -1,4 +1,4 @@
-import { Carousel, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { Layout } from "../../components/Layout";
 import firsts from '../../assets/img/banner-certidao.jpg'
 import secondimg from '../../assets/img/documentos-autenticar.jpg'
@@ -15,30 +15,50 @@ export function Webview() {
         <div className="home">         
             <p className='font-weight-bold mb-0'>Nós sabemos que nem sempre é fácil e tranquilo localizar e solicitar documentos em cartório. Pensando nisso surgiu o Brasil Cartórios. Localizamos e solicitamos documentos em todo e qualquer carório extrajudicial do Brasil. Utilizar os nossos serviços é muito fácil, basta se cadastrar no serviço notarial desejado.</p>     
         </div >
-        <Carousel className='carrousel'>
-        <Carousel.Item data-interval="5">
           <img
             className="d-block w-100"
             src={firsts} height="250px"
             alt="First slide"
           />  
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carrousel-img1"
-            src={secondimg} height="250px"
-            alt="Second slide"
-          />
-        </Carousel.Item>
-      </Carousel> 
         <div>
           <Row>
-          <Col xs={6} md={6} lg={6} className='mb-3 text-center'>  
-            <h3>Links uteis</h3>
-            <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center">Corregedoria Nacional</a>
+          <Col xs={12} md={6} lg={6} className='mb-3'>  
+            <h3 className="text-center font-weight-bold home">Informações úteis</h3>
+            <img src={secondimg} alt='documentoexterior' width='100%' className="mb-1"/>
+            <img src='/cart-protesto.jpg' width='100%' alt='protesto'/>
           </Col>
-          <Col xs={6} md={6} lg={6} className='mb-3'>  
-            <h3 className="text-center">Noticias</h3>
+          <Col xs={12} md={6} lg={6} className='mb-3 text-center'>  
+            <h3 className="font-weight-bold text-center home">Links úteis</h3>
+            <Card className='bg-secondary mb-2 '>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white align-items-center ">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
+            <Card className='bg-secondary mb-2'>
+              <a href="https://www.cnj.jus.br/corregedoriacnj/" className="text-center mb-2 text-decoration-none text-white">Corregedoria Nacional</a>
+            </Card>
           </Col>
           </Row>
         </div>

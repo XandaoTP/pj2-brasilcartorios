@@ -23,6 +23,7 @@ export function Services () {
         })      
     }, [])
     return(
+        <div className="bgcardcolor d-flex flex-column flex-grow-1">
         <Layout>
             <Container>
                 <h1 className="text-center mt-3 mb-3">SERVIÇOS</h1>
@@ -41,7 +42,8 @@ export function Services () {
                     )
                 })}
                 </Row>
-            </Container>                
+            </Container>               
         </Layout>
+        </div>
     )
 }
