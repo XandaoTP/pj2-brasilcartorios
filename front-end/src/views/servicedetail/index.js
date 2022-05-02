@@ -6,6 +6,7 @@ import { Load } from "../../components/Load";
 import { NotFoundView } from "../Notfound";
 import { Records } from "./records";
 import { Registerform } from "./registerform";
+import { getServicesById } from "../../services/serv.service"
 
 export function ServiceInfoView () {
         const { id } = useParams()
@@ -14,13 +15,10 @@ export function ServiceInfoView () {
         const [error, setError] = useState()
         const fetchServices = useCallback(async () => {
                 try {
-                    const detailService = await fetch(`${process.env.REACT_APP_API_URL}/services/${id}?_embed=records`)
-                    if(!detailService.ok) {
-                        throw new Error('Detailservice is not responding.')
-                    }
-                const info = await detailService.json()
-                setService(info)
-                setLoad(false)
+                    const info = await getServicesById(id)
+                    console.log(info)
+                    setService(info)
+                    setLoad(false)
                 } catch (err) {
                     const message = err.message === 'Detailservice is not responding.' ? '404' : 'Tivemos um problema. Tente recarregar a pagina.'
                     setError(message)

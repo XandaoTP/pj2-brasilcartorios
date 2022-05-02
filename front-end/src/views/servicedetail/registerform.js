@@ -1,12 +1,13 @@
 import { useState } from "react"
 import { Alert, Button, Form } from "react-bootstrap"
+import { createIscrip } from "../../services/inscr.service"
  
 export function Registerform ({ serviceId, onRegister }) {
    const [registerSuccess, setRegisterSuccess] = useState(false)
    const [error, setError] = useState()
    const [noRepeatSub, setNoRepeatSub] = useState(false)
     const [data, setDate] = useState({
-      user: '',
+      user:'',
       city: '',
       email: ''
      })
@@ -21,17 +22,11 @@ export function Registerform ({ serviceId, onRegister }) {
       try {
          setError()
          setNoRepeatSub(true)
-         await fetch(`${process.env.REACT_APP_API_URL}/records`,{
-            method: 'POST',
-            body: JSON.stringify({
-               name: data.user,
-               city: data.city,
-               email: data.email,
-               serviceId: parseInt(serviceId)
-            }),
-            headers: {
-               'content-type': 'application/json'
-            }
+         await createIscrip({
+            name: data.user,
+            city: data.city,
+            email: data.email,
+            serviceId: parseInt(serviceId)
          })
          setRegisterSuccess(true)
          setDate({
