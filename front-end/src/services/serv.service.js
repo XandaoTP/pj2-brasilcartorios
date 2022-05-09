@@ -1,5 +1,7 @@
+import { urlApi } from "./api.service"
+
 export const listServices = async () => {
-    const listServ = await fetch(`${process.env.REACT_APP_API_URL}/services`)
+    const listServ = await fetch(`${urlApi}/services`)
     if(!listServ.ok) {
         throw new Error(`services is not responding.`)
     }
@@ -7,7 +9,7 @@ export const listServices = async () => {
 }
 
 export const getServicesById = async (servId) => {
-    const detailService = await fetch(`${process.env.REACT_APP_API_URL}/services/${servId}?_embed=records`)
+    const detailService = await fetch(`${urlApi}/services/${servId}?_embed=records`)
     if(!detailService.ok) {
      throw new Error('Detailservice is not responding.')
     }

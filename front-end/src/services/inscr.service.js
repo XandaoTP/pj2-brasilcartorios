@@ -1,5 +1,7 @@
+import { urlApi } from "./api.service"
+
 export const createIscrip = async (inscripData) => {
-   const response = await fetch(`${process.env.REACT_APP_API_URL}/records`,{
+   const response = await fetch(`${urlApi}/records`,{
         method: 'POST',
         body: JSON.stringify(inscripData),
         headers: {
