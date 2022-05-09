@@ -1,8 +1,8 @@
-
 import { useState } from "react";
-import { Button, Form, Toast } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { login } from "../../services/user.service";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 
 export function LoginForm () {
     const [data, setDate] = useState({
@@ -15,10 +15,16 @@ export function LoginForm () {
            [event.target.name]: event.target.value
         })
      } 
+     const dispath = useDispatch()
      const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-           await login(data)
+           const userData = await login(data)
+           const action = {
+              type: 'USER_LOGIN',
+              payload: userData
+           }
+           dispath(action)
         }catch (error) {
             const message = error.message === 'Credentials invalid.' || data === 'Cannot find user'
             ? 'E-mail ou senha inválidos.'
