@@ -1,11 +1,14 @@
 import { CloseButton } from "react-bootstrap"
+import { useSelector } from "react-redux"
 import styled from "styled-components"
+import { dataSelector } from "../../store/user/user.selectors"
 
 export function Sidebar ({ showBar, closeBar }) {
+    const username = useSelector(dataSelector)
     return (
         <ProfileBar className="bg-gradient" showBar={showBar}>
             <CloseButton onClick={closeBar} />
-            <h2 className="text-center text-primary mt-3">Alexandre Afonso Silva</h2>           
+            <h2 className="text-center text-primary mt-3">{username.name}</h2>           
         </ProfileBar>
     )
 }

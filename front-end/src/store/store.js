@@ -1,16 +1,8 @@
 import { createStore } from 'redux'
+import { usereducer } from './user/user.reducer'
 
-const reducer = (state, action) => {
-    if(action.type === '@@INIT') {
-        return null
-    }
-    if(action.type === 'USER_LOGIN') {
-        return action.payload
-    }
-
-}
 
 export const store = createStore(
-    reducer,
+    usereducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
