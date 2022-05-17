@@ -1,1 +1,3 @@
-export const dataSelector = state => state
+export const dataSelector = state => state.userData
+
+export const selectUserLoggedIn = state => !!state.userData

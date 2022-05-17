@@ -9,15 +9,18 @@ import { HeaderItens } from "./headeritem";
 const menuItems =[
     {
         to: '/portaldeacesso/servicos',
-        text: 'Seriços'
+        text: 'Serviços',
+        userTypes:[1, 2]
     },
     {
         to: '/portaldeacesso/inf',
-        text: 'Informações'
+        text: 'Informações',
+        userTypes: [1]
     }
 ]
 
 export function HeaderLogIn ({ openSide }) {
+    const { type } = useSelector(dataSelector)
     const username = useSelector(dataSelector)
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -35,7 +38,7 @@ export function HeaderLogIn ({ openSide }) {
             <Nav.Item>
                 <Nav.Link onClick={openSide}>{username.name}</Nav.Link>
             </Nav.Item>
-            {menuItems.map((item, index) => (
+            {menuItems.filter(item => item.userTypes.includes(type)).map((item, index) => (
               <HeaderItens key={index} item={item} />
             ) )}
             <Nav.Item className="ms-auto">
