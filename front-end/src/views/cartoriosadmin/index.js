@@ -9,16 +9,16 @@ import { TableListServices } from "./tableservices";
 export function CartAreaView () {
     const [services, setServices] = useState([])
     const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        const fetchServices = async () => {
+    const fetchServices = async () => {
         try {
             const data = await listServices()
             setServices(data)
         } catch {
-          Toast.erro('Erro ao buscar servicos. Tente novamente recarregando a pagina')  
+          Toast.error('Erro ao buscar servicos. Tente novamente recarregando a pagina')  
         }  
         setLoading(false)
     }
+    useEffect(() => {
         fetchServices()
     }, [])
     return (
@@ -28,7 +28,7 @@ export function CartAreaView () {
             buttonText='Novo servico'
             buttonLink='/portaldeacesso/servicos/novoservico'/>
         {loading && <Load />}
-        <TableListServices services={services} />
+        <TableListServices services={services} onDeleteService={fetchServices} />
         </Layoutlogin>
     )
 }

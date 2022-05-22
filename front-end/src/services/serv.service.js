@@ -1,4 +1,4 @@
-import { urlApi } from "./api.service"
+import { getAuthHeaders, urlApi } from "./api.service"
 
 export const listServices = async () => {
     const listServ = await fetch(`${urlApi}/services`)
@@ -14,4 +14,14 @@ export const getServicesById = async (servId) => {
      throw new Error('Detailservice is not responding.')
     }
    return detailService.json()
+}
+
+export const deleteService = async serviceId => {
+    const response = await fetch (`${urlApi}/services/${serviceId}`, {
+        method: 'DELETE',
+        headers: getAuthHeaders()
+    })
+    if(!response.ok) {
+    throw new Error('Response not ok.')
+    }
 }

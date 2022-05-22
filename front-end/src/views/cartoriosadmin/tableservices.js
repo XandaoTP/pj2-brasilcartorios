@@ -1,10 +1,16 @@
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { deleteService } from "../../services/serv.service";
 
-export function TableListServices ({ services }) {
-    const deleteSeviceBtn = (event) => {
-        console.log(event)
-
+export function TableListServices ({ services, onDeleteService }) {
+    const deleteSeviceBtn = async (service) => {
+        try {
+            await deleteService(service.id)
+            await onDeleteService()
+        } catch {
+            toast.error('Falha ao deletar seviço.')
+        }
     }
     return (
         <Table striped hover responsive>
