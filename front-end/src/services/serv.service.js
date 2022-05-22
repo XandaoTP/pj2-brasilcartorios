@@ -25,3 +25,19 @@ export const deleteService = async serviceId => {
     throw new Error('Response not ok.')
     }
 }
+
+export const createService = async serviceData => {
+    const body = JSON.stringify(serviceData)
+    console.log('oi', body)
+    const response = await fetch(`${urlApi}/services`, {
+        method: 'POST',
+        body,
+        headers: {
+            'content-type': 'application/json',
+            ...getAuthHeaders()
+        }
+    }) 
+    if(!response.ok) {
+        throw new Error('Response is not ok.')
+    }
+}

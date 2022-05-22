@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "./components/privateroute";
 import { AccessPortal } from "./views/Acessportal";
 import { Services } from "./views/Cardsservices";
+import { Addservice } from "./views/cartaddservice";
 import { CartAreaView } from "./views/cartoriosadmin";
 import { Webview } from "./views/Home";
 import { Loginpage } from "./views/login";
@@ -28,8 +29,16 @@ function App() {
     <Route path='/login' element={<Loginpage />} />
     <Route 
       path='/portaldeacesso/servicos'
-      element={<PrivateRoute userPriv={[1]}><CartAreaView /></PrivateRoute>} />
-  </Routes>
+      element={<PrivateRoute userPriv={[1]}>
+        <CartAreaView />
+        </PrivateRoute>} />
+        <Route 
+    path='/portaldeacesso/servicos/novoservico'
+    element={<PrivateRoute userPriv={[1]}>
+      <Addservice />
+      </PrivateRoute>} />
+    </Routes>
+  
   );
 }
 
