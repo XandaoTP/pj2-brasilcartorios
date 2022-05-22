@@ -38,6 +38,36 @@
       "email": "alexandre@alexandre.com.b",
       "serviceId": 1,
       "id": 1
+    },
+    {
+      "name": "as",
+      "city": "as",
+      "email": "alexandre8603@gmail.com",
+      "serviceId": 1,
+      "id": 2
+    },
+    {
+      "name": "asdf",
+      "city": "asdf",
+      "email": "adf@asd",
+      "serviceId": null,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "usuario@usuario.com.br",
+      "password": "$2a$10$KG/Mf8o2hzS7mBamXG69Yu/BPy2P/8lY.90LYYYO7oPi0qb9EYcU2",
+      "name": "Usuario",
+      "type": 2,
+      "id": 1
+    },
+    {
+      "email": "cartorio@cartorio.com.br",
+      "password": "$2a$10$79nAMpTEFdN5cg.4iFWVQeSsJP1HlwNpyYO/rBk6rD3RTRGei.n7W",
+      "name": "Tabeliao",
+      "type": 1,
+      "id": 2
     }
   ]
 }

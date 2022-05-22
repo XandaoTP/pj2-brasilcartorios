@@ -1,0 +1,9 @@
+export const userLogin = (userData) => {
+    return {
+        type: 'USER_LOGIN',
+        payload: userData
+    }
+}
+export const userLogout = () => ({
+    type: 'USER_LOGOUT'
+})

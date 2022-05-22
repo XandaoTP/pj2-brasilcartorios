@@ -3,6 +3,7 @@ import { Alert, Col, Container, Row } from "react-bootstrap";
 import { Cards } from "../../components/Cards";
 import { Layout } from "../../components/Layout";
 import { Load } from "../../components/Load";
+import { listServices } from "../../services/serv.service";
 
 
 export function Services () {
@@ -10,17 +11,16 @@ export function Services () {
     const [load, setLoad] = useState(true)
     const [loadError, setLoaderror] = useState()
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_API_URL}/services`)
-        .then((response) => response.json())
-        .then((result) => {
-            setServices(result)
-        })
-        .catch(() => {
-            setLoaderror('Tivemos um problema. Tente novamente.')
-        })
-        .finally (() =>{
+            const services = async () => {  
+            try {
+               const serv = await listServices()
+               setServices(serv)
+            }catch {
+                setLoaderror('Tivemos um problema. Tente novamente.')
+            }
             setLoad(false)
-        })      
+        }
+        services()      
     }, [])
     return(
         <div className="bgcardcolor d-flex flex-column flex-grow-1">
