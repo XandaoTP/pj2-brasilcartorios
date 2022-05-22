@@ -41,3 +41,18 @@ export const createService = async serviceData => {
         throw new Error('Response is not ok.')
     }
 }
+
+export const UpdateService = async (serviceId, serviceData) => {
+    const body = JSON.stringify(serviceData)
+    const response = await fetch(`${urlApi}/services/${serviceId}`, {
+        method: 'PUT',
+        body,
+        headers: { 
+            'content-type': 'application/json',
+            ...getAuthHeaders()
+        }
+    })
+    if(!response.ok) {
+        throw new Error ('Response not ok.')
+    }
+}

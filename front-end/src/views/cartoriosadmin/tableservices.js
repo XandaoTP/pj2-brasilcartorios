@@ -51,7 +51,7 @@ export function TableListServices ({ services, onDeleteService }) {
                         <Button
                         size="sm"
                         as={Link}
-                        to={`/portaldeacesso/serviços/${service.id}`}
+                        to={`/portaldeacesso/servicos/${service.id}`}
                         >Editar</Button>
                         <Button 
                         size="sm"

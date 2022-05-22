@@ -10,10 +10,12 @@ const menuItems =[
     {
         to: '/portaldeacesso/servicos',
         text: 'Serviços',
+        checkAllPath: false,
         userTypes:[1]
     },
     {
         to: '/portaldeacesso/inf',
+        checkAllPath: false,
         text: 'Informações',
         userTypes: [1, 2]
     }
