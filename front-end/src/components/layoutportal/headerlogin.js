@@ -10,12 +10,12 @@ const menuItems =[
     {
         to: '/portaldeacesso/servicos',
         text: 'Serviços',
-        userTypes:[1, 2]
+        userTypes:[1]
     },
     {
         to: '/portaldeacesso/inf',
         text: 'Informações',
-        userTypes: [1]
+        userTypes: [1, 2]
     }
 ]
 

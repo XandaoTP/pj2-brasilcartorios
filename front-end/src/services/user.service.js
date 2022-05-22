@@ -16,14 +16,39 @@ export const login = async (credentialData) => {
         : 'response not ok.'
         throw new Error(message)
   }
-  const userData = {
-      accessToken: dataLogin.accessToken,
-      ...dataLogin.user
-  }
-  setStorageItem('user', JSON.stringify(userData))
-  return userData
+  return authResponse(dataLogin)
 }
-
 export const logoutUser = () => {
     removeStorageItem('user')
+}
+
+export const createUser = async (userData) => {
+    const body = JSON.stringify({
+        ...userData,
+        type: 2
+    })
+    const response = await fetch(`${urlApi}/signup`, {
+        method: 'POST',
+        body,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    const data = await response.json()
+    if(!response.ok) {
+        const message = typeof data === 'string'
+        ? data
+        : 'Response not ok.'
+        throw new Error(message)
+    }
+    return authResponse(data)
+}
+
+const authResponse = (data) => {
+    const userData = {
+        accessToken: data.accessToken,
+        ...data.user
+    }
+    setStorageItem('user', JSON.stringify(userData))
+    return userData
 }

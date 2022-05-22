@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { createUser } from "../../services/user.service";
+import { userLogin } from "../../store/user/user.action";
 
-export function RegisterLogin () {
-    const [data, setDate] = useState({
+export function RegisterLogin ({ redirectAfterLogin }) {
+   const [submiting, setSubmiting] = useState(false)
+   const [data, setDate] = useState({
         password: '',
         email: '',
         name:'',
+        city:'',
        })
        const SelectForm = (event) => {
         setDate({
@@ -13,9 +20,24 @@ export function RegisterLogin () {
            [event.target.name]: event.target.value
         })
      } 
-     const handleSubmit = (event) => {
+     const dispatch = useDispatch()
+     const navigate = useNavigate()
+     const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log(data)
+        try {
+           setSubmiting(true)
+           const userData = await createUser(data)
+           dispatch(userLogin(userData))
+           if (redirectAfterLogin) {
+           navigate('/portaldeacesso')
+           }
+        }catch (error){
+           const messageError = error.message === 'Email already exists'
+           ? 'Email ja cadastrado'
+           : 'Erro ao se cadastrar.'
+         toast.error(messageError)
+         setSubmiting(false)
+        }
      }
     return (
         <Form onSubmit={handleSubmit}>
@@ -27,6 +49,16 @@ export function RegisterLogin () {
             value={data.name}
             onChange={SelectForm}
             name='name'
+            required
+            />
+         </Form.Group>
+         <Form.Group controlId="register-city" className="h5 mb-3">
+            <Form.Label className="m-0">Local de pesquisa</Form.Label>
+            <Form.Control
+            placeholder="Local de pesquisa"
+            value={data.city}
+            onChange={SelectForm}
+            name='city'
             required
             />
          </Form.Group>
@@ -50,9 +82,10 @@ export function RegisterLogin () {
             name='password'
             type='password'
             required
+            minLength={4}
             />
          </Form.Group>
-         <Button type='submit' variant="success">Entrar</Button>
+         <Button type='submit' variant="success" disabled={submiting}>Entrar</Button>
         </Form>
     )
 }

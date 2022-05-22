@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../store/user/user.action";
 
-export function LoginForm () {
+export function LoginForm ({ redirectAfterLogin }) {
+    const [submiting, setSubmiting] = useState(false)
     const [data, setDate] = useState({
         password: '',
         email: ''
@@ -22,16 +23,20 @@ export function LoginForm () {
      const handleSubmit = async (event) => {
         event.preventDefault()
         try {
+            setSubmiting(true)
            const userData = await login(data)
            // enviar para redux
            dispath(userLogin(userData))
-           navigate('/portaldeacesso')
+           if (redirectAfterLogin) {
+            navigate('/portaldeacesso')
+            }
         }catch (error) {
             const message = error.message === 'Credentials invalid.' || data === 'Cannot find user'
             ? 'E-mail ou senha inválidos.'
             :'Ocorreu um erro'
             console.error(error)
             toast.error(message)
+            setSubmiting(false)
      }
     }
     return (
@@ -59,7 +64,7 @@ export function LoginForm () {
             required
             />
          </Form.Group>
-         <Button type='submit' variant="success">Entrar</Button>
+         <Button type='submit' variant="success" disabled={submiting}>Entrar</Button>
         </Form>
     )
 }

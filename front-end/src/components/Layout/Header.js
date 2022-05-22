@@ -26,10 +26,8 @@ export function Header() {
                     {userLoggedIn ? (
                         <Nav.Link as={Link} to="/portaldeacesso">Sua conta</Nav.Link>
                         ) : (
-                            <Nav.Link as={Link} to="/portaldeacesso/login">login</Nav.Link>
-
-                                       )}
-                    <Nav.Link as={Link} to="/portaldeacesso/login">login</Nav.Link>
+                            <Nav.Link as={Link} to="/login">login</Nav.Link>
+                        )}
                     <Nav.Link as={Link} to="/servicosnotariais">Serviços</Nav.Link>
                 </Nav>
                 <Form className="d-flex">

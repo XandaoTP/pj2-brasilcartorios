@@ -1,11 +1,13 @@
-import { urlApi } from "./api.service"
+import { urlApi, getAuthHeaders } from "./api.service"
 
 export const createIscrip = async (inscripData) => {
-   const response = await fetch(`${urlApi}/records`,{
+    const response = await fetch(`${urlApi}/records`,{
         method: 'POST',
         body: JSON.stringify(inscripData),
         headers: {
-           'content-type': 'application/json'
+           'content-type': 'application/json',
+           ...getAuthHeaders()
+        
         }
     })   
     if(!response.ok){
