@@ -12,7 +12,7 @@ https://brasilcartorios.netlify.app/
 
 https://brasilcartorios-fux65hns0-xandaotp.vercel.app
 
-## Autor
+## Desenvolvedor
 
-<kbd>[<img src="https://avatars.githubusercontent.com/u/98927676?s=400&v=4" width=115><br><sub><strong>Alexandre Afonso Silva</strong></sub>](https://github.com/XandaoTP)|</kbd>
-
+| [<img src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Alexandre Afonso Silva</sub>](https://github.com/XandaoTP) |  
+| :---: 
