@@ -31,9 +31,9 @@
 
 ## Abrir e rodar o projeto
 
-`https://brasilcartorios-fux65hns0-xandaotp.vercel.app`
+https://brasilcartorios-fux65hns0-xandaotp.vercel.app
 
-`https://brasilcartorios.netlify.app/`
+https://brasilcartorios.netlify.app/
 
 ## Desenvolvedor
 
