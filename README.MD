@@ -5,9 +5,10 @@
 
 <h2 align="center">📝 :memo: Descrição do projeto - Ifnet 📝 :memo: </h2>
 
-<p>Projeto desenvolvido durante BootCamp do instituto infnet, no projeto foi implementado login, cadastro de usuário, serviço e api. Para o projeto foi utilizado o React-create-app, react-redux, Heroku, bootStrape, JSON server e Json Server Auth/p>
+<p>Projeto desenvolvido durante BootCamp do instituto infnet, no projeto foi implementado login, cadastro de usuário, serviço e api. Para o projeto foi utilizado o React-create-app, react-redux, Heroku, bootStrape, JSON server e Json Server Auth</p>
 
-![Projeto](https://github.com/XandaoTP/pj2-brasilcartorios/blob/main/front-end/src/assets/img/gitsite.gif)
+![Projeto](https://github.com/XandaoTP/pj2-brasilcartorios/blob/main/front-end/src/assets/img/gifsite.gif)
+
 ## Funcionalidades
 
 :heavy_check_mark: `Funcionalidade 1:` Realizar cadastro dos usuários.
