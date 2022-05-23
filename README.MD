@@ -14,5 +14,5 @@ https://brasilcartorios-fux65hns0-xandaotp.vercel.app
 
 ## Autor
 
-<kbd>[<img src="https://avatars.githubusercontent.com/u/98927676?s=400&v=4" width=115><br><sub>Alexandre Afonso Silva</sub>](https://github.com/XandaoTP)|</kbd>
+<kbd>[<img src="https://avatars.githubusercontent.com/u/98927676?s=400&v=4" width=115><br><h5>Alexandre Afonso Silva</h5>](https://github.com/XandaoTP)|</kbd>
 
