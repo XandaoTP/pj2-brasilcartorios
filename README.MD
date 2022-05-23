@@ -12,8 +12,6 @@ https://brasilcartorios.netlify.app/
 
 https://brasilcartorios-fux65hns0-xandaotp.vercel.app
 
->>>>>>> pj3
 ## Autor
 
-| [<img src="https://avatars.githubusercontent.com/u/98927676?s=400&v=4" width=115><br><sub>Alexandre Afonso Silva</sub>](https://github.com/XandaoTP) 
-| :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/98927676?s=400&v=4" width=115><br><sub>Alexandre Afonso Silva</sub>](https://github.com/XandaoTP) |
