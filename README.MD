@@ -1,9 +1,7 @@
-PROJETO 2
-
-Brasil Cartórios
+<h1 align="center"> Projeto 2 & 3 - Brasil Cartórios - Ifnet </h1>
 
 
-PROJETO EM DESENVOLVIMENTO!
+![Cartório é serviço](https://github.com/XandaoTP/pj2-brasilcartorios/blob/main/front-end/src/assets/img/cartorio-e-servico.png)
 
 <<<<<<< HEAD
 
