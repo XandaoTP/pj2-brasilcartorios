@@ -7,7 +7,9 @@
 
 <p>Projeto desenvolvido durante BootCamp do instituto infnet, no projeto foi implementado login, cadastro de usuário, serviço e api. Para o projeto foi utilizado o React-create-app, react-redux, Heroku, bootStrape, JSON server e Json Server Auth</p>
 
-![Projeto](https://github.com/XandaoTP/pj2-brasilcartorios/blob/main/front-end/src/assets/img/gifsite.gif)
+<div align='center'> 
+    <img src="https://github.com/XandaoTP/pj2-brasilcartorios/blob/main/front-end/src/assets/img/gifsite.gif" />
+  </div>
 
 ## Funcionalidades
 
@@ -19,11 +21,13 @@
 
 ## Ferramentas utilizadas
 
-<img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/javascript.svg" alt="javacript" width="40" height="40"/>
-<img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/createreactapp.svg" alt="React" width="40" height="40"/>
-<img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/html5.svg" alt="HTML5" width="40" height="40"/>
-<img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/bootstrap.svg" alt="BootStrap" width="40" height="40"/>
-<img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/heroku.svg" alt="Heroku" width="40" height="40"/>
+<div style="display: flex;">
+    <img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/javascript.svg" alt="javacript" width="40" height="40"/>
+    <img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/createreactapp.svg" alt="React" width="40" height="40"/>
+    <img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/html5.svg" alt="HTML5" width="40" height="40"/>
+    <img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/bootstrap.svg" alt="BootStrap" width="40" height="40"/>
+    <img src="https://github.com/simple-icons/simple-icons/blob/develop/icons/heroku.svg" alt="Heroku" width="40" height="40"/>
+</div>
 
 ## Abrir e rodar o projeto
 
